@@ -10,4 +10,5 @@ spec:
   issuerRef:
     name: selfsigned-issuer
     kind: Issuer
-
+  dependsOn:
+    - selfsigned-issuer

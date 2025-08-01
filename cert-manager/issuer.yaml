@@ -6,4 +6,4 @@ metadata:
 spec:
   selfSigned: {}
   dependsOn:
-    - internal-ca-issuer
+    - name: internal-ca-issuer

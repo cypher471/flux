@@ -2,3 +2,4 @@ resources:
   - cert-manager.yaml
   - metal-lb.yaml
   - istio.yaml
+  - portainer.yaml

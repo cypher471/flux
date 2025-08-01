@@ -6,5 +6,3 @@ metadata:
 spec:
   ca:
     secretName: internal-ca-secret
-  dependsOn:
-    - name: helm-release 

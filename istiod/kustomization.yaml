@@ -1,2 +1,3 @@
 resources:
-  - istiod-helmrelease.yaml                                                                                                                               - istiod-ingress.yaml
+  - istiod-helmrelease.yaml
+  - istiod-ingress.yaml

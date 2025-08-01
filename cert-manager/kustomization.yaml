@@ -3,4 +3,3 @@ resources:
   - helmrelease.yaml
   - cluster-issuer.yaml
   - issuer.yaml
-  - certificate.yaml

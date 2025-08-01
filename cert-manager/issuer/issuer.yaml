@@ -5,5 +5,3 @@ metadata:
   namespace: cert-manager
 spec:
   selfSigned: {}
-  dependsOn:
-    - name: internal-ca-issuer

@@ -3,3 +3,4 @@ resources:
   - metal-lb.yaml
   - istio.yaml
   - portainer.yaml
+  - prometheus.yaml

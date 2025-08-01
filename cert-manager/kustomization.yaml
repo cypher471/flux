@@ -1,5 +1,4 @@
 resources:
-  - helmrepository.yaml
-  - helmrelease.yaml
+  - helmrepository/helmrepository.yaml
+  - helmrelease/helmrelease.yaml
   - cluster-issuer.yaml
-  - issuer.yaml

@@ -1,2 +1,3 @@
 resources:
-  - infrastructure.yaml
+  - cert-manager.yaml
+  - metal-lb.yaml

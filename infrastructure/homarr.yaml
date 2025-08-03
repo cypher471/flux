@@ -31,6 +31,6 @@ metadata:
   name: homarr
   namespace: flux-system
 spec:
-  url: https://homarr-labs.github.io/charts/charts/homarr/
   interval: 10m
+  url: https://homarr.dev/helm
 

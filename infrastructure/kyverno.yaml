@@ -14,7 +14,6 @@ spec:
   chart:
     spec:
       chart: kyverno
-      version: 3.x.x   # Use latest available from repo
       sourceRef:
         kind: HelmRepository
         name: kyverno

@@ -1,3 +1,7 @@
 resources:
+<<<<<<< HEAD
   - virtual.yaml
 
+=======
+  - virtual.yaml 
+>>>>>>> d0d71bb27526dc4192a5ae69229b3cec43e18076

@@ -14,7 +14,6 @@ spec:
   chart:
     spec:
       chart: homarr
-      version: ">=1.30.0"    # match latest available version
       sourceRef:
         kind: HelmRepository
         name: homarr

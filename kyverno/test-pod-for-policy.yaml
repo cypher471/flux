@@ -1,0 +1,15 @@
+# bad-pod.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: badpod
+  labels:
+    app: test
+spec:
+  hostPID: true
+  containers:
+    - name: nginx
+      image: nginx
+      securityContext:
+        allowPrivilegeEscalation: true
+

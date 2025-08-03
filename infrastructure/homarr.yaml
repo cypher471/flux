@@ -32,5 +32,5 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m
-  url: https://oben01.github.io/charts/ 
+  url: https://homarr-labs.github.io/charts/ 
 

@@ -3,8 +3,5 @@ resources:
   - metal-lb.yaml
   - istio.yaml
   - portainer.yaml
-<<<<<<< HEAD
   - kyverno.yaml
-=======
   - prometheus.yaml
->>>>>>> d0d71bb27526dc4192a5ae69229b3cec43e18076

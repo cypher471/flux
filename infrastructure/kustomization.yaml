@@ -4,4 +4,3 @@ resources:
   - istio.yaml
   - kyverno.yaml
   - prometheus.yaml
-  - portainer.yaml

@@ -11,8 +11,9 @@ spec:
   timeout: 5m
   sourceRef:
     kind: GitRepository
-    name: flux-system # points to your repo
-  path: ./gitlab/ # folder with GitLab HelmRelease
+    name: flux-system # must match your existing GitRepository
+    namespace: flux-system
+  path: ./gitlab/
   prune: true
   wait: true
   postBuild:

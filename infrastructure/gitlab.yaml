@@ -25,10 +25,12 @@ spec:
     global:
       edition: ce
       hosts:
-        domain: gitlab.local # any internal domain, used by Istio
+        domain: gitlab.cipher.lab.local
+      ingress:
+        configureCertmanager: false
     gitlab:
       webservice:
-        type: ClusterIP # Internal service only
+        type: ClusterIP
         externalTrafficPolicy: Cluster
       unicorn:
         replicas: 1

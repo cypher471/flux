@@ -28,12 +28,14 @@ spec:
         domain: gitlab.cipher.lab.local
         https: false
       ingress:
-        configureCertmanager: false
         enabled: false
+        configureCertmanager: false
     gitlab:
       webservice:
         type: ClusterIP
         externalTrafficPolicy: Cluster
+        ingress:
+          enabled: false
       unicorn:
         replicas: 1
       sidekiq:
@@ -45,6 +47,10 @@ spec:
       password: "redispass"
     nginx-ingress:
       enabled: false
+    gitlab_rails:
+      trusted_proxies:
+        - 10.0.0.0/8
+        - 127.0.0.1
 ---
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository

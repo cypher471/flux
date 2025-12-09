@@ -35,7 +35,6 @@ spec:
       sidekiq:
         replicas: 1
     postgresql:
-      install: true
       postgresqlPassword: "gitlabpass"
       postgresqlDatabase: "gitlabhq_production"
     redis:

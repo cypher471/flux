@@ -1,0 +1,59 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: gitlab
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: gitlab
+  namespace: gitlab
+spec:
+  interval: 10m
+  chart:
+    spec:
+      chart: gitlab
+      version: "9.6.1"
+      sourceRef:
+        kind: HelmRepository
+        name: gitlab
+        namespace: flux-system
+  values:
+    global:
+      edition: ce
+      hosts:
+        domain: gitlab.local # any internal domain, used by Istio
+    gitlab:
+      webservice:
+        type: ClusterIP # Internal service only
+        externalTrafficPolicy: Cluster
+      unicorn:
+        replicas: 1
+      sidekiq:
+        replicas: 1
+    postgresql:
+      install: true
+      postgresqlPassword: "gitlabpass"
+      postgresqlDatabase: "gitlabhq_production"
+    redis:
+      install: true
+      password: "redispass"
+    minio:
+      install: false
+    prometheus:
+      install: false
+    certmanager:
+      install: false
+    ingress:
+      configureCertmanager: false
+      annotations: {} # no SSL annotations
+
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: gitlab
+  namespace: flux-system
+spec:
+  url: https://charts.gitlab.io/
+  interval: 10m

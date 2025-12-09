@@ -3,8 +3,8 @@ kind: Namespace
 metadata:
   name: gitlab
   labels:
-    app.kubernetes.io/name: cert-manager
-    app.kubernetes.io/instance: cert-manager
+    app.kubernetes.io/name: gitlab
+    app.kubernetes.io/instance: gitlab
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
@@ -12,6 +12,7 @@ metadata:
   name: gitlab
   namespace: gitlab
 spec:
+  releaseName: gitlab
   interval: 10m
   chart:
     spec:

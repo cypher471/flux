@@ -39,14 +39,7 @@ spec:
       postgresqlPassword: "gitlabpass"
       postgresqlDatabase: "gitlabhq_production"
     redis:
-      install: true
       password: "redispass"
-    minio:
-      install: false
-    prometheus:
-      install: false
-    certmanager:
-      install: false
     ingress:
       configureCertmanager: false
       annotations: {} # no SSL annotations

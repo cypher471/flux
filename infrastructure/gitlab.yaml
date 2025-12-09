@@ -29,6 +29,7 @@ spec:
         https: false
       ingress:
         configureCertmanager: false
+        enabled: false
     gitlab:
       webservice:
         type: ClusterIP
@@ -42,9 +43,8 @@ spec:
       postgresqlDatabase: "gitlabhq_production"
     redis:
       password: "redispass"
-    ingress:
-      configureCertmanager: false
-      annotations: {} # no SSL annotations
+    nginx-ingress:
+      enabled: false
 ---
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository

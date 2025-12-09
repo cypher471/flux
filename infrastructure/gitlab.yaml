@@ -26,6 +26,7 @@ spec:
       edition: ce
       hosts:
         domain: gitlab.cipher.lab.local
+        https: false
       ingress:
         configureCertmanager: false
     gitlab:

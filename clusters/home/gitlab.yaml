@@ -1,4 +1,3 @@
----
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
@@ -12,8 +11,8 @@ spec:
   timeout: 5m
   sourceRef:
     kind: GitRepository
-    name: flux-system
-  path: ./gitlab/
+    name: flux-system # points to your repo
+  path: ./gitlab/ # folder with GitLab HelmRelease
   prune: true
   wait: true
   postBuild:

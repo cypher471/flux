@@ -14,6 +14,6 @@ spec:
             prefix: /
       route:
         - destination:
-            host: gitlab-gitlab-webservice
+            host: gitlab-webservice-default
             port:
               number: 8080

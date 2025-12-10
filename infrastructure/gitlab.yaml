@@ -23,39 +23,39 @@ spec:
         namespace: flux-system
   values:
     global:
-      edition: ce
       hosts:
-        domain: gitlab.cipher.lab.local
+        domain: cipher.lab.local
         https: false
+        gitlab:
+          name: gitlab.cipher.lab.local
+        registry:
+          name: registry.cipher.lab.local
+        minio:
+          name: minio.cipher.lab.local
       ingress:
         enabled: false
         configureCertmanager: false
-    gitlab:
-      webservice:
-        type: ClusterIP
-        externalTrafficPolicy: Cluster
-        ingress:
-          enabled: false
-      unicorn:
-        replicas: 1
-      sidekiq:
-        replicas: 1
+      gitlab:
+        url: "https://gitlab.cipher.lab.local"
+    certmanager:
+      enabled: false
+    certmanager-issuer:
+      email: "noreply@example.com"
     nginx-ingress:
       enabled: true
-      controller:
+    gitlab:
+      webservice:
         service:
           type: ClusterIP
-    postgresql:
-      postgresqlPassword: "gitlabpass"
-      postgresqlDatabase: "gitlabhq_production"
-    redis:
-      password: "redispass"
-    gitlab_rails:
-      trusted_proxies:
-        - 10.0.0.0/8
-        - 127.0.0.1
-        - 0.0.0.0/0
-
+    registry:
+      service:
+        type: ClusterIP
+    gitlab-shell:
+      service:
+        type: ClusterIP
+    minio:
+      service:
+        type: ClusterIP
 ---
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository

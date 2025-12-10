@@ -5,3 +5,4 @@ resources:
   - kyverno.yaml
   - prometheus.yaml
   - portainer.yaml
+  - gitlab.yaml

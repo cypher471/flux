@@ -46,6 +46,8 @@ spec:
         configureCertmanager: false
       gitlab:
         url: "https://gitlab.cipher.lab.local"
+    gitlab-runner:
+      enabled: false
     certmanager:
       enabled: false
     certmanager-issuer:

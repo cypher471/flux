@@ -13,6 +13,15 @@ metadata:
   namespace: gitlab
 spec:
   interval: 10m
+  timeout: 10m
+  install:
+    timeout: 30m
+    remediation:
+      retries: 3
+  upgrade:
+    timeout: 10m
+    remediation:
+      retries: 3
   chart:
     spec:
       chart: gitlab

@@ -40,17 +40,22 @@ spec:
         replicas: 1
       sidekiq:
         replicas: 1
+    nginx-ingress:
+      enabled: true
+      controller:
+        service:
+          type: ClusterIP
     postgresql:
       postgresqlPassword: "gitlabpass"
       postgresqlDatabase: "gitlabhq_production"
     redis:
       password: "redispass"
-    nginx-ingress:
-      enabled: false
     gitlab_rails:
       trusted_proxies:
         - 10.0.0.0/8
         - 127.0.0.1
+        - 0.0.0.0/0
+
 ---
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository

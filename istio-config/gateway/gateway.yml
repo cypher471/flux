@@ -1,0 +1,19 @@
+---
+apiVersion: networking.istio.io/v1beta1
+kind: Gateway
+metadata:
+  name: wildcard-gateway
+  namespace: istio-system
+spec:
+  selector:
+    istio: ingressgateway # or your gateway label
+  servers:
+    - port:
+        number: 443
+        name: https
+        protocol: HTTPS
+      tls:
+        mode: SIMPLE
+        credentialName: wildcard-tls # Must match secret name in istio-system
+      hosts:
+        - "*.cipher.lab.local"

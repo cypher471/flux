@@ -1,0 +1,5 @@
+---
+resources:
+  - certificate/certificate.yml
+  - cluster-issuer/cluster-issuer.yml
+  - issuer/issuer.yml

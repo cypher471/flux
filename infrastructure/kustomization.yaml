@@ -1,7 +1,0 @@
-resources:
-  - cert-manager.yaml
-  - metal-lb.yaml
-  - istio.yaml
-  - kyverno.yaml
-  - prometheus.yaml
-  - portainer.yaml

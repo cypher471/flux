@@ -8,3 +8,4 @@ resources:
   - metal-lb-config.yml
   - istio.yml
   - istiod.yml
+  - istio-config.yml

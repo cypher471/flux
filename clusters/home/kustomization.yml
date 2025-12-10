@@ -7,4 +7,3 @@ resources:
   - metal-lb.yml
   - metal-lb-config.yml
   - istio.yml
-  - istiod.yml

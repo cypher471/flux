@@ -2,6 +2,3 @@ resources:
   - namespace/namespace.yaml
   - helm-release/helm-release.yaml
   - helm-repo/helm-repo.yaml
-  - certificate/certificate.yaml
-  - cluster-issuer/cluster-issuer.yaml
-  - issuer/issuer.yaml

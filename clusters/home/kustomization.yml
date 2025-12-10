@@ -4,3 +4,5 @@ resources:
   - flux-system
   - cert-manager.yml
   - cert-manager-config.yml
+  - metal-lb.yml
+  - metal-lb-config.yml

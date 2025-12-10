@@ -6,3 +6,4 @@ resources:
   - cert-manager-config.yml
   - metal-lb.yml
   - metal-lb-config.yml
+  - istio.yml

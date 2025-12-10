@@ -1,0 +1,5 @@
+---
+resources:
+  - namespace/namespace.yml
+  - helm-release/helm-release.yml
+  - helm-repo/helm-repo.yml

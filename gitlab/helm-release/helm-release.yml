@@ -45,6 +45,9 @@ spec:
       email: "noreply@example.com"
     gitlab:
       webservice:
+        minReplicas: 1
+        maxReplicas: 1
+        replicaCount: 1
         service:
           type: ClusterIP
     registry:

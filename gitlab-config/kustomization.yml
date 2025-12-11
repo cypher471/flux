@@ -1,0 +1,3 @@
+---
+resources:
+  - virtual-service/virtual-service.yml

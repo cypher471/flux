@@ -11,3 +11,5 @@ resources:
   - istio-config.yml
   - prometheus.yml
   - prometheus-config.yml
+  - gitlab.yml
+  - gitlab-config.yml

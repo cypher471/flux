@@ -51,9 +51,10 @@ spec:
         service:
           type: ClusterIP
     registry:
-      minReplicas: 1
-      maxReplicas: 1
-      replicaCount: 1
+      hpa:
+        minReplicas: 1
+        maxReplicas: 1
+        replicaCount: 1
       service:
         type: ClusterIP
     gitlab-shell:

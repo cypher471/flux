@@ -9,3 +9,5 @@ resources:
   - istio.yml
   - istiod.yml
   - istio-config.yml
+  - prometheus.yml
+  - prometheus-config.yml

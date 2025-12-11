@@ -42,7 +42,7 @@ spec:
     gitlab-runner:
       install: false
     certmanager:
-      enabled: false
+      install: false
     certmanager-issuer:
       email: "noreply@example.com"
     nginx-ingress:

@@ -41,12 +41,8 @@ spec:
     installCertmanager: false
     gitlab-runner:
       install: false
-    certmanager:
-      enabled: false
     certmanager-issuer:
       email: "noreply@example.com"
-    nginx-ingress:
-      enabled: true
     gitlab:
       webservice:
         service:

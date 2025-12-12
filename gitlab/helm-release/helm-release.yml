@@ -37,7 +37,7 @@ spec:
         enabled: false
         configureCertmanager: false
       gitlab:
-        url: "https://gitlab.cipher.lab.local"
+        url: "http://gitlab-webservice-default.gitlab.svc.cluster.local"
     installCertmanager: false
     gitlab-runner:
       install: false

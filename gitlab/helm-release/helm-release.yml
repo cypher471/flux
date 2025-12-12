@@ -26,7 +26,7 @@ spec:
     global:
       hosts:
         domain: cipher.lab.local
-        https: false
+        https: true # <- Enable HTTPS since Istio is handling TLS
         gitlab:
           name: gitlab.cipher.lab.local
         registry:
@@ -36,13 +36,12 @@ spec:
       ingress:
         enabled: false
         configureCertmanager: false
-      gitlab:
-        url: "http://gitlab.cipher.lab.local"
     installCertmanager: false
     gitlab-runner:
       install: false
     certmanager-issuer:
       email: "noreply@example.com"
+
     gitlab:
       webservice:
         minReplicas: 1
@@ -50,6 +49,13 @@ spec:
         replicaCount: 1
         service:
           type: ClusterIP
+      url: "https://gitlab.cipher.lab.local" # <- Set external URL to HTTPS
+
+    gitlab_rails: # <- Rails config for HTTPS generation
+      gitlab_hostname: gitlab.cipher.lab.local
+      gitlab_port: 443
+      gitlab_https: true
+
     registry:
       hpa:
         minReplicas: 1
